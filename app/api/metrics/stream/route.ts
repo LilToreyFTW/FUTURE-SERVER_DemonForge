@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { Server } from 'ws';
+import { WebSocketServer as Server } from 'ws';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

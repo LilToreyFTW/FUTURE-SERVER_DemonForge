@@ -40,6 +40,7 @@
     "ws": "^8.20.0"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20.19.39",
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",

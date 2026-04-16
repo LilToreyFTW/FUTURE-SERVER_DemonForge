@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { backupOperations } from '@/lib/db/queries';
 import { v4 as uuidv4 } from 'uuid';
+import { requireAuth } from '@/lib/auth/middleware';
 
 // GET all backups
 export async function GET(request: NextRequest) {

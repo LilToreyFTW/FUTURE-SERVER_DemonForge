@@ -2,9 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { serverOperations, metricsOperations } from '@/lib/db/queries';
 import { SSHClient } from '@/lib/ssh/client';
 import { v4 as uuidv4 } from 'uuid';
+import { requireAuth } from '@/lib/auth/middleware';
 
 // GET all servers
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const authError = requireAuth(request);
+  if (authError) return authError;
+
   try {
     const servers = serverOperations.getAll();
     return NextResponse.json(servers);
