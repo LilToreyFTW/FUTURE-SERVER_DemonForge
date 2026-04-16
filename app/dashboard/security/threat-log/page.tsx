@@ -7,67 +7,32 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { AlertTriangle, Shield, Lock, Search, Filter } from 'lucide-react';
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY || 'demo-api-key-change-me';
+
 export default function ThreatLogPage() {
   const [threats, setThreats] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('');
 
+  const fetchThreats = async () => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/security/threats?filter=${filter}`, {
+        headers: { 'x-api-key': API_KEY },
+      });
+      if (!res.ok) throw new Error('Failed to fetch threats');
+      const data = await res.json();
+      setThreats(data);
+    } catch (error) {
+      console.error('Error fetching threats:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    // Mock data for now - would fetch from API
-    setThreats([
-      {
-        id: 1,
-        type: 'ddos',
-        severity: 'critical',
-        source: '192.168.1.100',
-        target: '10.0.0.5',
-        message: 'DDoS attack detected - 50,000 requests/second',
-        timestamp: new Date(Date.now() - 3600000).toISOString(),
-        status: 'mitigated'
-      },
-      {
-        id: 2,
-        type: 'intrusion',
-        severity: 'warning',
-        source: '203.0.113.45',
-        target: '10.0.0.3',
-        message: 'Suspicious login attempt from unknown IP',
-        timestamp: new Date(Date.now() - 7200000).toISOString(),
-        status: 'blocked'
-      },
-      {
-        id: 3,
-        type: 'firewall',
-        severity: 'info',
-        source: '198.51.100.23',
-        target: '10.0.0.2',
-        message: 'Blocked connection attempt to port 22',
-        timestamp: new Date(Date.now() - 10800000).toISOString(),
-        status: 'blocked'
-      },
-      {
-        id: 4,
-        type: 'malware',
-        severity: 'critical',
-        source: 'N/A',
-        target: '10.0.0.4',
-        message: 'Malware signature detected on server',
-        timestamp: new Date(Date.now() - 14400000).toISOString(),
-        status: 'quarantined'
-      },
-      {
-        id: 5,
-        type: 'brute_force',
-        severity: 'warning',
-        source: '45.33.32.156',
-        target: '10.0.0.1',
-        message: 'SSH brute force attack detected',
-        timestamp: new Date(Date.now() - 18000000).toISOString(),
-        status: 'blocked'
-      }
-    ]);
-    setLoading(false);
-  }, []);
+    fetchThreats();
+  }, [filter]);
 
   const filteredThreats = threats.filter(threat =>
     threat.message.toLowerCase().includes(filter.toLowerCase()) ||
