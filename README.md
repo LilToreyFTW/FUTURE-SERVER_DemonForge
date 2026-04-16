@@ -1,5 +1,9 @@
 # DemonForge Engine
 
+**Copyright (c) 2026 TOREY. All rights reserved.**
+
+This software is proprietary and protected by copyright law. See LICENSE file for complete terms and restrictions.
+
 The DemonForge Engine is a premium, proprietary GUI control panel for rack hosting infrastructure. It transforms raw physical servers into a seamless, app-like management experience without ever needing SSH or command-line tools.
 
 ## Features

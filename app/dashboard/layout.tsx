@@ -1,3 +1,13 @@
+/**
+ * DemonForge Engine
+ * Copyright (c) 2026 TOREY. All rights reserved.
+ * 
+ * This software is proprietary. Modification, editing, or alteration of this code
+ * is strictly prohibited except by the copyright holder (TOREY) and authorized developers.
+ * Use is limited to launching and running the application on localhost or your own server rack.
+ * See LICENSE file for complete terms.
+ */
+
 'use client';
 
 import { useState } from 'react';

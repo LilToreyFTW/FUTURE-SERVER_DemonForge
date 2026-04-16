@@ -1,0 +1,44 @@
+DEMONFORGE ENGINE - PROPRIETARY LICENSE
+
+Copyright (c) 2026 TOREY. All rights reserved.
+
+This software is the proprietary property of TOREY and is protected by copyright law and international treaties.
+
+RESTRICTIONS ON USE:
+
+1. LICENSE GRANT:
+   - You are granted a limited, non-exclusive, non-transferable license to use this software for the sole purpose of launching and running the application on your local machine (localhost) or on your own physical server rack infrastructure.
+
+2. PROHIBITED ACTIVITIES:
+   - You may NOT modify, edit, alter, or change any portion of the source code
+   - You may NOT use AI coding assistants (including but not limited to Cursor, t3, Codex, Claude, GitHub Copilot, or any other AI code generation tool) to modify the codebase
+   - You may NOT decompile, reverse engineer, or attempt to derive the source code
+   - You may NOT create derivative works based on this software
+   - You may NOT distribute modified versions of this software
+   - You may NOT remove or alter any copyright notices or license terms
+
+3. AUTHORIZED USE:
+   - Launching the application through an IDE for local development
+   - Running the application on localhost for testing purposes
+   - Deploying to your own physical server rack infrastructure for production use
+   - Viewing the source code for educational purposes only
+
+4. EXCEPTIONS:
+   - The original author (TOREY) and authorized developers (Cascade AI) are permitted to modify the codebase
+   - No other individuals or entities are authorized to make modifications
+
+5. ENFORCEMENT:
+   - Any attempt to violate these restrictions constitutes copyright infringement
+   - The author reserves all rights not expressly granted in this license
+   - Violators may be subject to legal action
+
+DISCLAIMER:
+
+This software is provided "as is" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+CONTACT:
+
+For inquiries about licensing or authorized use, contact the copyright holder.
+
+TOREY
+DemonForge Engine

@@ -1,5 +1,6 @@
 {
   "name": "demon-forge-engine",
+  "copyright": "(c) 2026 TOREY. All rights reserved. This software is proprietary. Modification prohibited except by copyright holder.",
   "version": "1.0.0",
   "private": true,
   "scripts": {
